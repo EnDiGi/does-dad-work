@@ -1,0 +1,45 @@
+body{
+	font-size: 44px;
+	text-align: center
+}
+
+#five-days {
+	margin: auto
+}
+
+input[type = "date"] {
+	margin: auto;
+	padding: 15px;
+	font-size: 1.5rem;
+	border: 2px solid #DEDEDE;
+	border-radius: 15px
+}
+
+button {
+	border: 2px solid #DEDEDE;
+	background-color: white;
+	padding: 20px;
+	min-width: 120px;
+	font-size: 1rem
+}
+
+#day1 {
+	border-radius: 15px 0 0 15px
+}
+
+#day5 {
+	border-radius: 0 15px 15px 0;
+}
+
+#submit {	
+	border: 2px solid #DEDEDE;
+	border-radius: 15px;
+	background-color: white;
+	padding: 20px;
+	font-size: 1.5rem
+}
+
+#five-days {
+	display: flex
+	margin: auto;
+}

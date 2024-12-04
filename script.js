@@ -1,6 +1,9 @@
 
 const today = new Date();
-document.getElementById("date").value = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+document.getElementById("date").value = `${today.getFullYear()}
+										-${String(today.getMonth() + 1).padStart(2, '0')}
+										-${String(today.getDate()).padStart(2, '0')}`;
+										// Imposting the date inout to today's date
 
 function get_inputted_date(){
 	if(document.getElementById("date").value){
@@ -10,8 +13,12 @@ function get_inputted_date(){
 
 function get_specific_day_date(date){
 
-	let days = ["Sera", "Lavoro (1)", "Lavoro (2)", "Mattina", "Casa"]
+	let days = ["Sera", "Mattina", "Pomeriggio", "Notte", "Casa"]
 	let start_date = new Date(2024, 10, 26, 1)
+
+	start_date.setHours(0, 0, 0, 0); // Hour reset to prevent DST issues
+
+    date.setHours(0, 0, 0, 0); // Hour reset to prevend DST issues
 
 	let start_date_is_greater = false;
 	let cycles = 0;
@@ -32,7 +39,7 @@ function get_specific_day_date(date){
 
 function submit(){
 
-	let days = ["Sera", "Lavoro (1)", "Lavoro (2)", "Mattina", "Casa"]
+	let days = ["Sera", "Mattina", "Pomeriggio", "Notte", "Casa"]
 
 	const baseDay = get_specific_day_date(get_inputted_date());
 

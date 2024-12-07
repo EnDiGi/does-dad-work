@@ -11,7 +11,7 @@ function get_inputted_date(){
 
 function get_specific_day_date(date){
 
-	let days = ["Sera", "Mattina", "Pomeriggio", "Notte", "Casa"]
+	let days = ["Sera", "Pomeriggio", "Mattina", "Notte", "Casa"]
 	let start_date = new Date(2024, 10, 26, 1)
 
 	start_date.setHours(0, 0, 0, 0); // Hour reset to prevent DST issues

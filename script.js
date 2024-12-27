@@ -1,7 +1,12 @@
 
 const today = new Date();
-document.getElementById("date").value = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-										// Imposting the date input to today's date
+
+function setup() {
+
+	// Gets today's date and formats it properly
+	document.getElementById("date").value = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+	submit()
+}
 
 function get_inputted_date(){
 	if(document.getElementById("date").value){
@@ -51,4 +56,4 @@ function submit(){
     });
 }
 
-submit()
+setup()
